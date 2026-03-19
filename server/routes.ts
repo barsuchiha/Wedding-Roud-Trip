@@ -1,6 +1,7 @@
 import { rsvpSubmissionSchema } from "@shared/rsvp";
 import type { Express, Request } from "express";
 import type { Server } from "http";
+import rateLimit from "express-rate-limit";
 import {
   isSmartCaptchaEnabled,
   SmartCaptchaValidationUnavailableError,
@@ -36,7 +37,18 @@ export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
-  app.post("/api/rsvps", async (req, res, next) => {
+  const rsvpRateLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100, // limit each IP to 100 RSVP requests per window
+    standardHeaders: true,
+    legacyHeaders: false,
+    message: {
+      message: "Слишком много попыток отправить форму. Попробуйте позже.",
+      code: "rate_limited",
+    },
+  });
+
+  app.post("/api/rsvps", rsvpRateLimiter, async (req, res, next) => {
     const parsedRsvp = rsvpSubmissionSchema.safeParse(req.body);
 
     if (!parsedRsvp.success) {
