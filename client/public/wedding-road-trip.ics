@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//O2 Wedding//Road Trip//RU
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:o2-wedding-road-trip-20260801@o2wedding
+DTSTAMP:20260319T091500Z
+DTSTART:20260801T120000Z
+DTEND:20260802T090000Z
+SUMMARY:Свадебный роуд-трип Оли и Олега
+DESCRIPTION:Заселение с 15:00 1 августа. Выселение в 12:00 2 августа.\n\nМесто: Чехов #APi.\nАдрес: Московская область\, город Чехов\, Резиденция Чехов #APi\, 58 км от МКАД.\nСайт: https://chekhovapi.com
+LOCATION:Чехов #APi\, Московская область\, город Чехов\, Резиденция Чехов #APi
+GEO:55.150639;37.394111
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+URL:https://chekhovapi.com
+END:VEVENT
+END:VCALENDAR

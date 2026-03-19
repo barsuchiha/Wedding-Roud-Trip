@@ -1,11 +1,19 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: "Calama New";
+  src: url("../Calama_new.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --font-sans: 'Montserrat', sans-serif;
-  --font-serif: 'Playfair Display', serif;
+  --font-serif: 'Calama New', 'Playfair Display', serif;
 
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
