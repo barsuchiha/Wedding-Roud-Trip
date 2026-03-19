@@ -9,6 +9,9 @@ RUN npm ci
 
 FROM deps AS build
 
+ARG PUBLIC_SITE_URL
+ENV PUBLIC_SITE_URL=$PUBLIC_SITE_URL
+
 COPY . .
 RUN npm run build
 

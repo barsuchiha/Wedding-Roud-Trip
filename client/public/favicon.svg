@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="heart-fill" x1="15" y1="10" x2="48" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFB2CF" />
+      <stop offset="0.45" stop-color="#FF7CAA" />
+      <stop offset="1" stop-color="#F04C83" />
+    </linearGradient>
+    <filter id="shadow" x="7" y="9" width="50" height="46" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#C93B67" flood-opacity="0.28" />
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <path
+      d="M32 50C31.2 50 30.5 49.7 29.9 49.2C19.6 40.8 13 34.8 13 25.9C13 18.9 18.3 14 24.8 14C28.4 14 31.1 15.6 32.8 18.2C34.5 15.6 37.2 14 40.8 14C47.3 14 52.6 18.9 52.6 25.9C52.6 34.8 46 40.8 35.7 49.2C35.1 49.7 34.4 50 33.6 50H32Z"
+      fill="url(#heart-fill)"
+      stroke="#DB4B7B"
+      stroke-width="2.25"
+      stroke-linejoin="round"
+    />
+  </g>
+
+  <path
+    d="M24.5 18.7C21.1 18.7 18.7 21 18.7 24.3"
+    stroke="white"
+    stroke-width="2.6"
+    stroke-linecap="round"
+    opacity="0.95"
+  />
+  <circle cx="28.5" cy="17.8" r="1.9" fill="white" opacity="0.95" />
+</svg>
